@@ -1,0 +1,29 @@
+<!--served up by default at the root of our website-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather</title>
+    <!-- ./ will take us to public class -->
+    <link rel="stylesheet" href = "/css/styles.css">
+    <link rel="icon" href="/img/cloudy.png">
+</head>
+<body>
+    <div class="main-contenrt">
+
+    {{>header}}<!--only write the file name-->
+    <p>Use this site to get your weather</p>
+    <form>
+        <input placeholder="location">
+        <button>Search</button>
+    </form>
+
+    <p id="message-1"> </p>
+    <p id="message-2"> </p>
+
+    </div>
+
+    {{>footer}} 
+    <!--Load java script file:-->
+    <script src="/js/app.js"> </script>
+</body>
+</html>
