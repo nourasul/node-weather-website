@@ -9,6 +9,7 @@ const forecast = require('./utils/forecast')
 //console.log(path.join(__dirname,'../public'))//C:\Users\NoraAlsuliman\OneDrive - Lean for Business Services\Desktop\node-cource\web-server\public
 
 const app = express()
+const port = process.env.PORT || 3000
 //configure express to serve the directry
 const publicDirectoryPath= path.join(__dirname,'../public')
 const viewPath= path.join(__dirname, '../template/views')
@@ -123,8 +124,8 @@ app.get('*',(req, res) =>{
 
 //start the server up
 //2nd arg: callback funcrion: function that runs when the server is up and running
-app.listen(3000, ()=>{
-    console.log('Server is up on port 3000')
+app.listen(port, ()=>{
+    console.log('Server is up on port '+ port)
 
 })
 //Templete engine to render a dynamic web page using express.
